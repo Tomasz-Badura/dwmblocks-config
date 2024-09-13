@@ -12,3 +12,5 @@ static const Block blocks[] = {
 
 static char delim[] = " | ";
 static unsigned int delimLen = 5;
+static char leftpad[]  = " ";
+static char rightpad[] = " ";

@@ -1,11 +1,14 @@
-//Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
-	{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
-
-	{"", "date '+%b %d (%a) %I:%M%p'",					5,		0},
+	{ "",		"sb-nixstoresize",		600,				10 },
+	{ "",		"sb-homesize",			600,				11 },
+	{ "",		"sb-datetime",			1,					13 },
+	{ "",		"sb-battery",			30,					14 },
+	{ "",		"sb-volume",			30,					15 },
+	{ "",		"sb-brightness",		0,					12 },
+	{ "",		"sb-internet",			5,					16 },
+	{ "",		"sb-ram",				15,					17 },
 };
 
-//sets delimiter between status commands. NULL character ('\0') means no delimiter.
 static char delim[] = " | ";
 static unsigned int delimLen = 5;
